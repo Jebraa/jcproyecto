@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+*{
+    scroll-behavior: smooth;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Comienzo Header */
+header{
+    width: 100%;
+    height: 80px;
+    margin-top: 0;
+    position: fixed;
+    z-index: 1;
+    padding: 40px;
+}
+
+.container__menu{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 40px;
+
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu ul{
+    display: flex;
+}
+
+.menu ul li{
+    list-style: none;
+    margin-left: 36px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+.menu a:hover{
+    color: rgb(94, 94, 94);
+}
+
+#fijo{
+    color: #fff;
+    background: #000000;
+    padding: 10px 40px;
+    border-radius: 50px;
+}
+
+#fijo:hover{
+    color: rgb(197, 197, 197);
+}
+
+.menu nav img{
+    display: none;
+}
+
+.menu #btn_menu{
+    display: none;
+}
+
+#opciones{
+    color: #000000;
+}
+
+/* Fin Header */
+
+
+/*Comienzo Menú Responsive*/
+
+@media (max-width: 900px){
+
+  .menu nav{
+      position: fixed;
+      top: 0;
+      right: -250px;
+      background: white;
+      width: 250px;
+      height: 100vh;
+      padding: 40px;
+      z-index: 1;
+      transition: all 300ms;
+  }
+
+  .menu ul{
+      flex-direction: column;
+      margin-top: 40px;
+  }
+
+  .menu ul li{
+      margin-top: 30px;
+      margin-left: 0;
+  }
+
+  .menu ul li a{
+      color: #686868;
+  }
+
+  .menu ul li a:hover{
+    color: #000000;
+    transition: all 300ms;
+}
+
+
+  #fijo{
+      background: none;
+      padding: 0px;
+      border-radius: none;
+      color: #000000;
+  }
+
+  .menu nav img{
+      display: block;
+      width: 60px;
+  }
+
+  #back_menu{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.5);
+      display: none;
+  }
+
+  .menu #btn_menu{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 24px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 300ms;
+  }
+
+  .menu #btn_menu:hover{
+      background: rgba(180, 180, 180, 0.2);
+  }
+}
+
+
+/* Comienzo Modo Oscuro */
+.dark-mode-button ul li{
+  position: absolute;
+  top: 6px;
+ 
+}
+
+html.dark-mode{
+  filter: invert(100%);
+}
+
+html.dark-mode img{
+  filter: invert(100%);
+}
+
+html.dark-mode .video_banner{
+  filter: invert(100%);
+}
+/* Fin Modo Oscuro */
+
+/* Comienzo Banner */
+
+.main_banner{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+
+.coleccion { 
+    text-align: center;
+    padding-top: 40px;
+}
+
+.coleccion p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.coleccion h1{
+    font-size: 80px;
+    text-align: center;
+}
+
+.coleccion a{
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+     background-color: transparent;
+     border: #111111 solid 3px;
+     color:#111111 !important;
+     padding: 13px 0px;
+     width: 200px;
+     text-align: center;
+     display: inline-block;
+    transition: ease-in all 0.3s;
+}
+
+.coleccion a:hover{
+    background: #111111;
+    color: #fff !important;
+    transition: ease-in all 0.3s;
+}
+/* Fin Banner */
+
+/* Comienzo "Menú de productos" */
+.main_productos{
+    padding-top: 100px;
+}
+
+.productos {
+	text-align: center;
+	margin-bottom: 45px;
+}
+.productos a{
+  text-decoration: none;
+  color: #b7b7b7
+  
+}
+
+.productos a:hover{
+  color: #000;
+  transition: ease-in all 0.3s;
+}
+
+.productos li {
+	color: #b7b7b7;
+	font-size: 24px;
+	font-weight: 700;
+	list-style: none;
+	display: inline-block;
+	margin-right: 88px;
+	cursor: pointer;
+}
+
+.productos li:hover{
+    color: #000;
+    transition: ease-in all 0.3s;
+}
+
+.productos li:last-child {
+	margin-right: 0;
+}
+
+#lomas a{
+  color: #000;
+}
+
+#nuevos a{
+  color: #000;
+}
+
+@media (max-width: 768px){
+  .productos{
+    display: flex;
+  }
+}
+  
+
+/* Fin "Menú de productos" */
+
+/* COMIENZO Catálogo de Productos */
+
+*{
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  .product_wrap{
+    display: flex;
+    width: 900px;
+    margin: 100px auto;
+  }
+  
+  .product_item{
+    width: 300px;
+    background: #fff;
+    margin-right: 25px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 4px rgba(0,0,0,0.125);
+    transition: all 300ms ease;
+  }
+
+  .product_item:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px 1px rgb(0, 0, 0);
+  }
+  
+  .product_item:last-child{
+    margin-right: 0;
+  }
+  
+  .product_item .img img{
+    width: 195px;
+    height: 225px;
+    margin-bottom: 10px;
+  }
+
+  .product_item .img_p img{
+    width: 120px;
+  }
+  
+  .product_item .size_color{
+    margin: 25px 0;
+  }
+  
+  .product_item .size_color .title{
+    margin-bottom: 10px;
+  }
+  
+  .product_item .size_wrap ul{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .product_item .size_wrap li{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .product_item .size_wrap li span{
+    color: #000000;
+	cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .product_item .size_wrap li:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px -15px rgba(0,0,0,0.5);
+    z-index: 1;
+  }
+  
+  .product_item .price{
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  .product_item .color_wrap ul{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+  }
+  
+  
+  .product_item .color_wrap ul li.active{
+    width: 30px;
+    height: 30px;
+  }
+   
+@media (max-width: 1100px){
+  .product_wrap{
+    max-width: 500px;
+    flex-direction: column;
+  }
+}
+
+/* Fin Catálogo de Productos */
+
+/* Comienzo Contactanos */
+
+.container-form{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    margin-top: 150px;
+    
+}
+.container-form h2{
+    margin-bottom: 15px;
+    font-size: 35px
+}
+.container-form p{
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.container-form a{
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: 700;
+}
+.container-form a i{
+    color: rgb(0, 0, 0);
+    margin-right: 10px;
+}
+.container-form form .campo, textarea{
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 16px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+.container-form form textarea{
+    max-width: 530px;
+    min-width: 530px;
+    min-height: 140px;
+    max-height: 150px;
+}
+.container-form .btn-enviar{
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background: rgb(0, 0, 0);
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.container-form .btn-enviar:hover{
+    background: #242424;
+}
+
+.footer {
+  display: flex;
+	background: #111111;
+	padding-top: 70px;
+}
+
+.container h1{
+  color: transparent;
+}
+
+.footer{
+  position: relative;
+  margin-top: 20px;
+  background-color: #000000;
+}
+
+.footer p{
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  background-color: transparent;
+  color: #fff;
+}
